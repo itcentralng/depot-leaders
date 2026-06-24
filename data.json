@@ -1,0 +1,10 @@
+{
+  "commandant": {
+    "name": "Pending Commandant Name",
+    "summary": "Pending commandant profile summary."
+  },
+  "deputy": {
+    "name": "Pending Deputy Name",
+    "summary": "Pending deputy profile summary."
+  }
+}

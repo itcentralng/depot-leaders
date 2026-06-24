@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depot Nigerian Army — Leadership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Video background -->
+  <div class="bg-layer" aria-hidden="true">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="assets/images/no_going_back_depot_10s.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <img src="assets/images/logo.png" alt="Depot Logo" class="nav-logo" onerror="this.style.display='none'">
+    <div class="brand">
+      <span class="brand-main">NIGERIAN ARMY DEPOT</span>
+      <span class="brand-sub">Leadership</span>
+    </div>
+  </nav>
+
+  <!-- Tab switcher -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-target="commandant" onclick="switchLeader('commandant')">
+      <span class="tab-icon">&#9670;</span>
+      <span class="tab-label">Commandant</span>
+    </button>
+    <div class="tab-divider"></div>
+    <button class="tab-btn" data-target="deputy" onclick="switchLeader('deputy')">
+      <span class="tab-label">Deputy Commandant</span>
+      <span class="tab-icon">&#9670;</span>
+    </button>
+  </div>
+
+  <!-- ── COMMANDANT VIEW ── -->
+  <div class="leader-view active" id="view-commandant">
+
+    <div class="hero-strip">
+      <div class="photo-frame">
+        <img src="assets/images/commandant.png" alt="Brigadier General Buhari Michael Madaki" class="leader-photo">
+        <div class="photo-shine" aria-hidden="true"></div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-role">Commandant</div>
+        <div class="hero-rank">Brigadier General</div>
+        <h1 class="hero-name">Buhari Michael Madaki</h1>
+        <div class="hero-subtitle">Pioneer Commandant &bull; Depot Nigerian Army Osogbo</div>
+        <div class="hero-appt">Appointed 5 June 2025</div>
+        <div class="hero-decorations">47 Regular Course NDA &nbsp;|&nbsp; RMA Sandhurst CC 001 &nbsp;|&nbsp; Infantry Corps</div>
+      </div>
+    </div>
+
+    <div class="bio-card glass-panel">
+      <div class="bio-scroll">
+
+        <div class="bio-section">
+          <div class="bio-section-label">Background &amp; Education</div>
+          <p class="bio-para">Brigadier General Buhari Michael Madaki is a member of 47 Regular Course of the Nigerian Defence Academy and Commissioning Course 001 of the Royal Military Academy Sandhurst. He is of the Infantry Corps and is a holder of master's degrees in International Affairs and Strategic Studies from the Nigerian Defence Academy as well as International Defence and Security from Cranfield University. He is an alumnus of the Harvard Kennedy School and holds an executive certificate in public leadership.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Key Courses</div>
+          <p class="bio-para">His professional courses include the Higher Defence and Strategic Studies Course at the National Defence College Abuja (Sept 2022 – Sept 2023), Higher Military Strategy and Management Course at the Army War College Nigeria (Apr – Dec 2018) and Infantry Commanding Officer's Course at the Nigerian Army School of Infantry Jaji (Sept – Dec 2016). He also attended the Military Training Assistance Programme Junior Command and Staff Course in Canada (2007) and has completed the Advanced Airborne Course, qualifying as a jump master.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Career &amp; Commands</div>
+          <p class="bio-para">Madaki has served in various capacities cutting across instruction, staff, command and diplomacy. He served as Instructor at the Airborne Wing of the Nigerian Army School of Infantry (2005–2008), Company Commander 4 Guards Battalion (2008–2010), Military Assistant to the Commandant of the Nigerian Defence Academy (2011–2012) and Acting Commanding Officer 72 Special Forces Battalion (2013–2014). He was Directing Staff at the Armed Forces Command and Staff College Jaji (2016–2018) and the National Defence College Abuja (2024–2025). He also served as Defence Attaché to Mali with concurrent accreditation to Senegal, The Gambia, Mauritania, Cape Verde and Western Sahara (2019–2022).</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Awards &amp; Decorations</div>
+          <p class="bio-para">Madaki is the recipient of the Overseas Sword of Honour from the Royal Military Academy Sandhurst. His other awards include the United Nations Mission in Liberia Medal, Nigeria Centenary and Golden Jubilee Medals, General Operations and Foreign Training Assistance Medals, and the Royal Military Academy Sandhurst and Command Medals.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Personal</div>
+          <p class="bio-para">Passionate about the Airborne and committed to remaining physically and mentally fit, Madaki is a wildlife enthusiast who enjoys jogging and watching movies. His philosophy is hinged on goodwill and leadership through service. He is married with children.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow nav-arrow-right" onclick="switchLeader('deputy')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Deputy Commandant</span>
+    </button>
+
+  </div>
+
+  <!-- ── DEPUTY COMMANDANT VIEW ── -->
+  <div class="leader-view" id="view-deputy">
+
+    <button class="nav-arrow nav-arrow-left" onclick="switchLeader('commandant')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Commandant</span>
+    </button>
+
+    <div class="hero-strip">
+      <div class="photo-frame">
+        <img src="assets/images/deputy.png" alt="Colonel Mathias Eshian Obi" class="leader-photo">
+        <div class="photo-shine" aria-hidden="true"></div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-role">Deputy Commandant</div>
+        <div class="hero-rank">Colonel</div>
+        <h1 class="hero-name">Mathias Eshian Obi</h1>
+        <div class="hero-subtitle">Pioneer Deputy Commandant &bull; Depot Nigerian Army Osogbo</div>
+        <div class="hero-appt">Appointed 5 June 2025</div>
+        <div class="hero-decorations">Short Service Combatant Course 31 NDA &nbsp;|&nbsp; Commissioned 29 June 2002 &nbsp;|&nbsp; Armoured Corps</div>
+      </div>
+    </div>
+
+    <div class="bio-card glass-panel">
+      <div class="bio-scroll">
+
+        <div class="bio-section">
+          <div class="bio-section-label">Background &amp; Education</div>
+          <p class="bio-para">Colonel Mathias Eshian Obi was born on 26 December 1976 in Bansan Osokom town of Boki Local Government Area, Cross River State. He attended Saint Manus' Primary School Okundi, Government Secondary School Ikom and the University of Calabar. He was enlisted into the Nigerian Defence Academy in January 2002 as a member of Short Service Combatant Course 31 and was commissioned 2Lt on 29 June 2002 into the Nigerian Army Armoured Corps. He holds a Bachelor of Agriculture (Hons) in Soil Science, a Masters in International Affairs and Defence Studies and a Post Graduate Diploma in Education.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Key Courses</div>
+          <p class="bio-para">Colonel Obi has attended numerous courses including Young Officer Course Armour and Infantry, Anti-Tank Platoon Commander Course, Regimental Intelligence and Security Officers' Course, Armour Mid Career Course, Armour Company Commander's Course, Armour Battalion Commander's Course, Junior and Senior Course, Protection of Civilians Course in Argentina, Nigerian Army French Language Course, African Contingency Operations and Training Assistance Course, and Army War College Nigeria.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Postings &amp; Service</div>
+          <p class="bio-para">He has served in 211 Tank Battalion, Nigeria Battalion 4 UNMIL, 211 Demo Battalion, 242 Recce Battalion, Nigeria Battalion UNAMID (Darfur), HQ 23 Brigade, Military Observer Mission in the DRC, HQ 22 Brigade, 221 Light Tank Battalion, 212 Tank Battalion, AHQ DARR/R, 231 Tank Battalion, HQ Nigerian Army Armour Corps, HQ Multinational Joint Task Force, and HQ Operation Safe Haven.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Operations</div>
+          <p class="bio-para">Obi has participated in Operation HARMONY IV, United Nations Mission in Liberia and Darfur, Operation MESA, MONUSCO, Operation ZAMAN LAFIYA, Operation DEEP PUNCH, Operation RESCUE FINALE, Operation LAFIYA DOLE, Operation AYISO TAMUNOMA, Operation TURA TAKAIBONGO, Operation HARDIN KAI, Operation YANCI TAFKI, Operation LAKE SANITY and Operation SAFE HAVEN.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Awards &amp; Decorations</div>
+          <p class="bio-para">Colonel Obi is a recipient of the Meritorious Service Star, Forces Service Star, Passed Staff College, Fellow War College, General Operations Medal and Command Medal. He is a proud member of the National Institute of Management and the Nigerian Army Resource Centre.</p>
+        </div>
+
+        <div class="bio-section">
+          <div class="bio-section-label">Personal</div>
+          <p class="bio-para">At leisure, Colonel Obi enjoys jogging, playing badminton and volleyball, studying people, conflict resolution, nature watching, reading, and listening to news and music. He is married and the union is blessed with children.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchLeader(which) {
+      // Update views
+      document.querySelectorAll('.leader-view').forEach(function(v) {
+        v.classList.remove('active', 'exit-left', 'exit-right', 'enter-left', 'enter-right');
+      });
+
+      var tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+
+      var incoming = document.getElementById('view-' + which);
+      var isDeputy = which === 'deputy';
+
+      incoming.classList.add('active');
+      document.querySelector('[data-target="' + which + '"]').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- Video background -->
   <div class="bg-layer" aria-hidden="true">
     <video class="bg-video" autoplay muted loop playsinline>
       <source src="assets/images/no_going_back_depot_10s.mp4" type="video/mp4">
@@ -19,7 +18,6 @@
     <div class="bg-overlay"></div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <img src="assets/images/logo.png" alt="Depot Logo" class="nav-logo" onerror="this.style.display='none'">
     <div class="brand">
@@ -28,152 +26,242 @@
     </div>
   </nav>
 
-  <!-- Tab switcher -->
-  <div class="tab-bar">
-    <button class="tab-btn active" data-target="commandant" onclick="switchLeader('commandant')">
-      <span class="tab-icon">&#9670;</span>
-      <span class="tab-label">Commandant</span>
-    </button>
-    <div class="tab-divider"></div>
-    <button class="tab-btn" data-target="deputy" onclick="switchLeader('deputy')">
-      <span class="tab-label">Deputy Commandant</span>
-      <span class="tab-icon">&#9670;</span>
-    </button>
+  <!-- ── HOME SCREEN ── -->
+  <div class="screen active" id="screen-home">
+    <div class="home-body">
+      <button class="role-card" onclick="showScreen('commandants')">
+        <div class="role-card-inner">
+          <div class="role-title">Commandants</div>
+          <div class="role-cta">Tap to explore <span class="role-arrow">→</span></div>
+        </div>
+      </button>
+
+      <button class="role-card" onclick="showScreen('deputies')">
+        <div class="role-card-inner">
+          <div class="role-title">Deputy Commandants</div>
+          <div class="role-cta">Tap to explore <span class="role-arrow">→</span></div>
+        </div>
+      </button>
+    </div>
   </div>
 
-  <!-- ── COMMANDANT VIEW ── -->
-  <div class="leader-view active" id="view-commandant">
-
-    <div class="hero-strip">
-      <div class="photo-frame">
-        <img src="assets/images/commandant.png" alt="Brigadier General Buhari Michael Madaki" class="leader-photo">
-        <div class="photo-shine" aria-hidden="true"></div>
-      </div>
-      <div class="hero-info">
-        <div class="hero-role">Commandant</div>
-        <div class="hero-rank">Brigadier General</div>
-        <h1 class="hero-name">Buhari Michael Madaki</h1>
-        <div class="hero-subtitle">Pioneer Commandant &bull; Depot Nigerian Army Osogbo</div>
-        <div class="hero-appt">Appointed 5 June 2025</div>
-        <div class="hero-decorations">47 Regular Course NDA &nbsp;|&nbsp; RMA Sandhurst CC 001 &nbsp;|&nbsp; Infantry Corps</div>
-      </div>
-    </div>
-
-    <div class="bio-card glass-panel">
-      <div class="bio-scroll">
-
-        <div class="bio-section">
-          <div class="bio-section-label">Background &amp; Education</div>
-          <p class="bio-para">Brigadier General Buhari Michael Madaki is a member of 47 Regular Course of the Nigerian Defence Academy and Commissioning Course 001 of the Royal Military Academy Sandhurst. He is of the Infantry Corps and is a holder of master's degrees in International Affairs and Strategic Studies from the Nigerian Defence Academy as well as International Defence and Security from Cranfield University. He is an alumnus of the Harvard Kennedy School and holds an executive certificate in public leadership.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Key Courses</div>
-          <p class="bio-para">His professional courses include the Higher Defence and Strategic Studies Course at the National Defence College Abuja (Sept 2022 – Sept 2023), Higher Military Strategy and Management Course at the Army War College Nigeria (Apr – Dec 2018) and Infantry Commanding Officer's Course at the Nigerian Army School of Infantry Jaji (Sept – Dec 2016). He also attended the Military Training Assistance Programme Junior Command and Staff Course in Canada (2007) and has completed the Advanced Airborne Course, qualifying as a jump master.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Career &amp; Commands</div>
-          <p class="bio-para">Madaki has served in various capacities cutting across instruction, staff, command and diplomacy. He served as Instructor at the Airborne Wing of the Nigerian Army School of Infantry (2005–2008), Company Commander 4 Guards Battalion (2008–2010), Military Assistant to the Commandant of the Nigerian Defence Academy (2011–2012) and Acting Commanding Officer 72 Special Forces Battalion (2013–2014). He was Directing Staff at the Armed Forces Command and Staff College Jaji (2016–2018) and the National Defence College Abuja (2024–2025). He also served as Defence Attaché to Mali with concurrent accreditation to Senegal, The Gambia, Mauritania, Cape Verde and Western Sahara (2019–2022).</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Awards &amp; Decorations</div>
-          <p class="bio-para">Madaki is the recipient of the Overseas Sword of Honour from the Royal Military Academy Sandhurst. His other awards include the United Nations Mission in Liberia Medal, Nigeria Centenary and Golden Jubilee Medals, General Operations and Foreign Training Assistance Medals, and the Royal Military Academy Sandhurst and Command Medals.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Personal</div>
-          <p class="bio-para">Passionate about the Airborne and committed to remaining physically and mentally fit, Madaki is a wildlife enthusiast who enjoys jogging and watching movies. His philosophy is hinged on goodwill and leadership through service. He is married with children.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <button class="nav-arrow nav-arrow-right" onclick="switchLeader('deputy')">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Deputy Commandant</span>
-    </button>
-
-  </div>
-
-  <!-- ── DEPUTY COMMANDANT VIEW ── -->
-  <div class="leader-view" id="view-deputy">
-
-    <button class="nav-arrow nav-arrow-left" onclick="switchLeader('commandant')">
+  <!-- ── COMMANDANTS SCREEN ── -->
+  <div class="screen" id="screen-commandants">
+    <button class="back-btn" onclick="showScreen('home')">
       <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Commandant</span>
+      <span>Back</span>
     </button>
 
-    <div class="hero-strip">
-      <div class="photo-frame">
-        <img src="assets/images/deputy.png" alt="Colonel Mathias Eshian Obi" class="leader-photo">
-        <div class="photo-shine" aria-hidden="true"></div>
+    <div class="role-screen-body">
+      <div class="current-section">
+        <div class="section-label">Current Commandant</div>
+        <div class="hero-strip" id="cmd-hero-strip">
+          <div class="photo-frame">
+            <img id="cmd-photo" src="" alt="" class="leader-photo">
+            <div class="photo-shine" aria-hidden="true"></div>
+          </div>
+          <div class="hero-info">
+            <div class="hero-role">Commandant</div>
+            <div class="hero-rank" id="cmd-rank"></div>
+            <h1 class="hero-name" id="cmd-name"></h1>
+            <div class="hero-subtitle" id="cmd-subtitle"></div>
+            <div class="hero-appt" id="cmd-appt"></div>
+            <div class="hero-decorations" id="cmd-dec"></div>
+          </div>
+        </div>
+        <div class="bio-card glass-panel">
+          <div class="bio-scroll" id="cmd-bio-scroll"></div>
+        </div>
       </div>
-      <div class="hero-info">
-        <div class="hero-role">Deputy Commandant</div>
-        <div class="hero-rank">Colonel</div>
-        <h1 class="hero-name">Mathias Eshian Obi</h1>
-        <div class="hero-subtitle">Pioneer Deputy Commandant &bull; Depot Nigerian Army Osogbo</div>
-        <div class="hero-appt">Appointed 5 June 2025</div>
-        <div class="hero-decorations">Short Service Combatant Course 31 NDA &nbsp;|&nbsp; Commissioned 29 June 2002 &nbsp;|&nbsp; Armoured Corps</div>
-      </div>
-    </div>
 
-    <div class="bio-card glass-panel">
-      <div class="bio-scroll">
-
-        <div class="bio-section">
-          <div class="bio-section-label">Background &amp; Education</div>
-          <p class="bio-para">Colonel Mathias Eshian Obi was born on 26 December 1976 in Bansan Osokom town of Boki Local Government Area, Cross River State. He attended Saint Manus' Primary School Okundi, Government Secondary School Ikom and the University of Calabar. He was enlisted into the Nigerian Defence Academy in January 2002 as a member of Short Service Combatant Course 31 and was commissioned 2Lt on 29 June 2002 into the Nigerian Army Armoured Corps. He holds a Bachelor of Agriculture (Hons) in Soil Science, a Masters in International Affairs and Defence Studies and a Post Graduate Diploma in Education.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Key Courses</div>
-          <p class="bio-para">Colonel Obi has attended numerous courses including Young Officer Course Armour and Infantry, Anti-Tank Platoon Commander Course, Regimental Intelligence and Security Officers' Course, Armour Mid Career Course, Armour Company Commander's Course, Armour Battalion Commander's Course, Junior and Senior Course, Protection of Civilians Course in Argentina, Nigerian Army French Language Course, African Contingency Operations and Training Assistance Course, and Army War College Nigeria.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Postings &amp; Service</div>
-          <p class="bio-para">He has served in 211 Tank Battalion, Nigeria Battalion 4 UNMIL, 211 Demo Battalion, 242 Recce Battalion, Nigeria Battalion UNAMID (Darfur), HQ 23 Brigade, Military Observer Mission in the DRC, HQ 22 Brigade, 221 Light Tank Battalion, 212 Tank Battalion, AHQ DARR/R, 231 Tank Battalion, HQ Nigerian Army Armour Corps, HQ Multinational Joint Task Force, and HQ Operation Safe Haven.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Operations</div>
-          <p class="bio-para">Obi has participated in Operation HARMONY IV, United Nations Mission in Liberia and Darfur, Operation MESA, MONUSCO, Operation ZAMAN LAFIYA, Operation DEEP PUNCH, Operation RESCUE FINALE, Operation LAFIYA DOLE, Operation AYISO TAMUNOMA, Operation TURA TAKAIBONGO, Operation HARDIN KAI, Operation YANCI TAFKI, Operation LAKE SANITY and Operation SAFE HAVEN.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Awards &amp; Decorations</div>
-          <p class="bio-para">Colonel Obi is a recipient of the Meritorious Service Star, Forces Service Star, Passed Staff College, Fellow War College, General Operations Medal and Command Medal. He is a proud member of the National Institute of Management and the Nigerian Army Resource Centre.</p>
-        </div>
-
-        <div class="bio-section">
-          <div class="bio-section-label">Personal</div>
-          <p class="bio-para">At leisure, Colonel Obi enjoys jogging, playing badminton and volleyball, studying people, conflict resolution, nature watching, reading, and listening to news and music. He is married and the union is blessed with children.</p>
-        </div>
-
+      <div class="past-section">
+        <div class="section-label">Past Commandants</div>
+        <div class="past-list" id="cmd-past-list"></div>
       </div>
     </div>
+  </div>
 
+  <!-- ── DEPUTIES SCREEN ── -->
+  <div class="screen" id="screen-deputies">
+    <button class="back-btn" onclick="showScreen('home')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Back</span>
+    </button>
+
+    <div class="role-screen-body">
+      <div class="current-section">
+        <div class="section-label">Current Deputy Commandant</div>
+        <div class="hero-strip" id="dep-hero-strip">
+          <div class="photo-frame">
+            <img id="dep-photo" src="" alt="" class="leader-photo">
+            <div class="photo-shine" aria-hidden="true"></div>
+          </div>
+          <div class="hero-info">
+            <div class="hero-role">Deputy Commandant</div>
+            <div class="hero-rank" id="dep-rank"></div>
+            <h1 class="hero-name" id="dep-name"></h1>
+            <div class="hero-subtitle" id="dep-subtitle"></div>
+            <div class="hero-appt" id="dep-appt"></div>
+            <div class="hero-decorations" id="dep-dec"></div>
+          </div>
+        </div>
+        <div class="bio-card glass-panel">
+          <div class="bio-scroll" id="dep-bio-scroll"></div>
+        </div>
+      </div>
+
+      <div class="past-section">
+        <div class="section-label">Past Deputy Commandants</div>
+        <div class="past-list" id="dep-past-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PAST LEADER MODAL ── -->
+  <div class="bio-modal" id="bio-modal" aria-hidden="true">
+    <div class="bio-modal-panel glass-panel">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </button>
+      <div class="hero-strip" id="modal-hero-strip">
+        <div class="photo-frame">
+          <img id="modal-photo" src="" alt="" class="leader-photo">
+          <div class="photo-shine" aria-hidden="true"></div>
+        </div>
+        <div class="hero-info">
+          <div class="hero-rank" id="modal-rank"></div>
+          <h2 class="hero-name" id="modal-name"></h2>
+          <div class="hero-subtitle" id="modal-subtitle"></div>
+          <div class="hero-appt" id="modal-tenure"></div>
+          <div class="hero-decorations" id="modal-dec"></div>
+        </div>
+      </div>
+      <div class="bio-scroll modal-bio-scroll" id="modal-bio-scroll"></div>
+    </div>
   </div>
 
   <script>
-    function switchLeader(which) {
-      // Update views
-      document.querySelectorAll('.leader-view').forEach(function(v) {
-        v.classList.remove('active', 'exit-left', 'exit-right', 'enter-left', 'enter-right');
-      });
+  (function () {
+    var DATA = null;
 
-      var tabs = document.querySelectorAll('.tab-btn');
-      tabs.forEach(function(t) { t.classList.remove('active'); });
-
-      var incoming = document.getElementById('view-' + which);
-      var isDeputy = which === 'deputy';
-
-      incoming.classList.add('active');
-      document.querySelector('[data-target="' + which + '"]').classList.add('active');
+    function setText(id, val) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = val || '';
     }
+    function setAttr(id, attr, val) {
+      var el = document.getElementById(id);
+      if (el) el[attr] = val || '';
+    }
+
+    function renderBio(scrollId, bioArr) {
+      var el = document.getElementById(scrollId);
+      if (!el) return;
+      el.innerHTML = (bioArr || []).map(function (s) {
+        return '<div class="bio-section">' +
+          '<div class="bio-section-label">' + s.label + '</div>' +
+          '<p class="bio-para">' + s.text + '</p>' +
+          '</div>';
+      }).join('');
+    }
+
+    function renderPastList(listId, pastArr, roleLabel) {
+      var el = document.getElementById(listId);
+      if (!el) return;
+      if (!pastArr || !pastArr.length) {
+        el.innerHTML = '<p class="past-empty">No past ' + roleLabel + ' on record yet.</p>';
+        return;
+      }
+      el.innerHTML = pastArr.map(function (p, i) {
+        return '<button class="past-card" onclick="openModal(\'' + listId + '\',' + i + ')">' +
+          '<div class="past-photo-wrap">' +
+            '<img src="' + (p.photo || '') + '" alt="' + p.name + '" class="past-thumb" onerror="this.style.display=\'none\'">' +
+          '</div>' +
+          '<div class="past-card-info">' +
+            '<div class="past-card-rank">' + (p.rank || '') + '</div>' +
+            '<div class="past-card-name">' + (p.name || '') + '</div>' +
+            '<div class="past-card-tenure">' + (p.tenure || '') + '</div>' +
+          '</div>' +
+          '<div class="past-card-cta">View Bio →</div>' +
+        '</button>';
+      }).join('');
+    }
+
+    function populateCommandants() {
+      var c = DATA.commandants.current;
+      setAttr('cmd-photo', 'src', c.photo);
+      setAttr('cmd-photo', 'alt', c.name);
+      setText('cmd-rank', c.rank);
+      setText('cmd-name', c.name);
+      setText('cmd-subtitle', c.subtitle);
+      setText('cmd-appt', 'Appointed ' + c.appointed);
+      setText('cmd-dec', c.decorations);
+      renderBio('cmd-bio-scroll', c.bio);
+      renderPastList('cmd-past-list', DATA.commandants.past, 'Commandants');
+    }
+
+    function populateDeputies() {
+      var d = DATA.deputies.current;
+      setAttr('dep-photo', 'src', d.photo);
+      setAttr('dep-photo', 'alt', d.name);
+      setText('dep-rank', d.rank);
+      setText('dep-name', d.name);
+      setText('dep-subtitle', d.subtitle);
+      setText('dep-appt', 'Appointed ' + d.appointed);
+      setText('dep-dec', d.decorations);
+      renderBio('dep-bio-scroll', d.bio);
+      renderPastList('dep-past-list', DATA.deputies.past, 'Deputy Commandants');
+    }
+
+    /* ── Navigation ── */
+    window.showScreen = function (id) {
+      document.querySelectorAll('.screen').forEach(function (s) {
+        s.classList.remove('active');
+      });
+      document.getElementById('screen-' + id).classList.add('active');
+    };
+
+    /* ── Past leader modal ── */
+    var _modalSource = null;
+
+    window.openModal = function (listId, idx) {
+      var pastArr = listId === 'cmd-past-list'
+        ? DATA.commandants.past
+        : DATA.deputies.past;
+      var p = pastArr[idx];
+      if (!p) return;
+      _modalSource = { listId: listId, idx: idx };
+      setAttr('modal-photo', 'src', p.photo || '');
+      setAttr('modal-photo', 'alt', p.name || '');
+      setText('modal-rank', p.rank || '');
+      setText('modal-name', p.name || '');
+      setText('modal-subtitle', p.subtitle || '');
+      setText('modal-tenure', p.tenure || '');
+      setText('modal-dec', p.decorations || '');
+      renderBio('modal-bio-scroll', p.bio || []);
+      var modal = document.getElementById('bio-modal');
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    };
+
+    window.closeModal = function () {
+      var modal = document.getElementById('bio-modal');
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    };
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ── Bootstrap ── */
+    fetch('data.json')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        DATA = d;
+        populateCommandants();
+        populateDeputies();
+      });
+  })();
   </script>
 
 </body>
